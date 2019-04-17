@@ -30,12 +30,13 @@ app.get('/apps', (req, res) =>
         }
     }
 
-    let results = apps;
+    let results = [];
+    console.log(results);
 
     if(genres)
     {
         results = apps.filter(app => 
-            app.genres.toLowerCase().includes(genres.toLowerCase())
+            app.Genres.toLowerCase().includes(genres.toLowerCase())
     );
     }
 
